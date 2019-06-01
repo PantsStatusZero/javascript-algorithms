@@ -5,7 +5,7 @@
  */
 export default function longestCommonSubsequence(set1, set2) {
   // Init LCS matrix.
-  const lcsMatrix = Array(set2.length + 1).fill(null).map(() => Array(set1.length + 1).fill(null));
+  const lcsMatrix = Array(set2.length + 1).fill().map(() => Array(set1.length + 1).fill().map(() => 0));
 
   // Fill first row with zeros.
   for (let columnIndex = 0; columnIndex <= set1.length; columnIndex += 1) {
